@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- GSAP for animations -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+<!-- Inter Font -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Víctor Cárdenas | Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<!-- Loading Overlay -->
+<div class="loader">
+    <div class="loader__inner"></div>
+  </div>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">
+      <img src="logo_vic.png" alt="Victor Cárdenas Logo" class="nav__logo-image">
+    </a>
+    <div class="nav__menu">
+      <a href="index.html" class="nav__item">Work</a>
+      <a href="about.html" class="nav__item">About</a>
+      <a href="cv.html" class="nav__item">CV</a>
+      <a href="contact.html" class="nav__item">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <main class="hero">
+    <h1 class="hero__title">
+      <span class="line">Víctor</span>
+      <span class="line">Cárdenas</span>
+    </h1>
+  </main>
+
+  <!-- Scrolling Content -->
+  <section class="scroller">
+    <div class="scroller__item">
+      <p>Data Engineer</p>
+    </div>
+    <div class="scroller__item">
+      <p>Data Scientist</p>
+    </div>
+    <div class="scroller__item">
+      <p>Designer</p>
+    </div>
+    <div class="scroller__item">
+        <p>Scroll down to see my work.</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+
+  <!-- Projects Section -->
+<section class="projects">
+    <div class="projects__grid">
+      <!-- Project 1 -->
+      <a href="project2.html" class="project">
+        <div class="project__image">
+          <img src="project_3.png" alt="Project 1">
+        </div>
+        <div class="project__info">
+          <h3>Emotion Classification</h3>
+          <p>Deep Learning</p>
+        </div>
+      </a>
+      
+      <!-- Project 2 -->
+      <a href="project2.html" class="project">
+        <div class="project__image">
+          <img src="project_4.png" alt="Project 2">
+        </div>
+        <div class="project__info">
+          <h3>Song Popularity Prediction</h3>
+          <p>Machine Learning</p>
+        </div>
+      </a>
+
+      <!-- Project 3 -->
+      <a href="project2.html" class="project">
+        <div class="project__image">
+          <img src="emotion_hero.jpg" alt="Project 2">
+        </div>
+        <div class="project__info">
+          <h3>Image Generation using Autoencoders</h3>
+          <p>Deep Learning</p>
+        </div>
+      </a>
+
+      <!-- Project 4 -->
+      <a href="project2.html" class="project">
+        <div class="project__image">
+          <img src="project_4_mobile.png" alt="Project 2">
+        </div>
+        <div class="project__info">
+          <h3>Octavio Navarro Website Design</h3>
+          <p>UX|UI</p>
+        </div>
+      </a>
+      <!-- Project 4 -->
+      <a href="project2.html" class="project">
+        <div class="project__image">
+          <img src="project_1.png" alt="Project 2">
+        </div>
+        <div class="project__info">
+          <h3>Agave Crop Estimation</h3>
+          <p>Data Engineering</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+  <!-- Navigation Arrows -->
+  <div class="projects-nav">
+    <button class="projects-nav__prev">←</button>
+    <button class="projects-nav__next">→</button>
+  </div>
+
+</body>
+</html>

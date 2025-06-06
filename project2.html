@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FER | Victor Cárdenas</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- GSAP for animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+  <!-- Inter Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap">
+</head>
+<body>
+  <!-- Loading Overlay -->
+  <div class="loader">
+    <div class="loader__inner"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">
+      <img src="logo_vic.png" alt="Victor Cárdenas Logo" class="nav__logo-image">
+    </a>
+    <div class="nav__menu">
+      <a href="index.html" class="nav__item">Work</a>
+      <a href="about.html" class="nav__item">About</a>
+      <a href="cv.html" class="nav__item">CV</a>
+      <a href="contact.html" class="nav__item">Contact</a>
+    </div>
+  </nav>
+  
+  <!-- Case Study Header -->
+  <header class="case-header">
+    <div class="case-header__content">
+      <h1 class="case-header__title">
+        <span class="line">Emotion Detection</span>
+        <span class="line">Using Deep Learning</span>
+      </h1>
+      <div class="case-header__meta">
+        <div class="case-meta__item">
+          <h4>Role</h4>
+          <p>Data Scientist</p>
+        </div>
+        <div class="case-meta__item">
+          <h4>Year</h4>
+          <p>2025</p>
+        </div>
+        <div class="case-meta__item">
+          <h4>Client</h4>
+          <p>Western Institute of Technology and Higher Education</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="case-hero">
+    <picture>
+      <source srcset="project_4_mobile.png" media="(max-width: 768px)">
+      <img src="project_4.png" alt="Hero Image" class="case-hero__image">
+    </picture>
+  </div>
+  
+  <!-- Case Study Content -->
+  <main class="case-content">
+    <!-- Introduction Section -->
+    <section class="case-section">
+      <div class="case-section__header">
+        <h2 class="case-section__title case-section__title--highlight">Introduction</h2>
+      </div>
+      <div class="case-section__content">
+        <p class="case-text"> In this project, I developed a Facial Expression Recognition (FER) system capable of classifying Ekman's seven universal emotions — anger, disgust, fear, happiness, sadness, surprise, and neutrality — by training a custom deep learning model on a high-quality, carefully curated dataset.</p>
+        <p class="case-text">The project blends classic and modern FER insights, aiming to make emotion recognition more accurate and accessible even with limited hardware. </p>
+      </div>
+    </section>
+
+    <!-- Two Column Layout -->
+    <section class="case-section case-section--two-column">
+      <div class="case-column">
+        <h3 class="case-column__title case-section__subtitle--highlight">The Challenge</h3>
+        <p class="case-text">Most state-of-the-art FER models are trained on constrained datasets or require high-end resources to achieve competitive accuracy.</p>
+        <p class="case-text">Expression recognition degrades under real-world conditions — such as varied lighting, face coverings or subtle expressions.</p>
+      </div>
+      <div class="case-column">
+        <h3 class="case-column__title case-section__subtitle--highlight">The Solution</h3>
+        <p class="case-text">A deep learning-based FER system trained on a hybrid dataset combining real, synthetic, and web-sourced images.</p>
+        <p class="case-text">The model architecture is based on a fine-tuned ResNet-18 with custom training strategies such as cross-domain data curation. This approach offers a balanced tradeoff between performance and resource efficiency.</p>
+      </div>
+    </section>
+
+    <!-- Full Width Image -->
+    <div class="case-image">
+      <img src="emotion_hero.jpg" alt="Project Detail">
+    </div>
+
+<!-- Process Section -->
+<section class="case-section">
+  <div class="case-section__header">
+    <h2 class="case-section__title case-section__title--highlight">Process</h2>
+  </div>
+  <div class="case-section__content">
+    <p class="case-text">The approach followed four essential phases:</p>
+
+    <div class="case-process">
+      <div class="case-process__item">
+        <h4 class="case-process__step">01</h4>
+        <h3 class="case-process__title">Problem Framing</h3>
+        <p class="case-process__desc">Defined the classification goal (7 Ekman emotions), established hardware constraints, and set performance targets.</p>
+      </div>
+      <div class="case-process__item">
+        <h4 class="case-process__step">02</h4>
+        <h3 class="case-process__title">Dataset Development</h3>
+        <p class="case-process__desc">Curated and manually reviewed 23,450 high-quality images from multiple datasets and sources, ensuring emotion accuracy and consistency.</p>
+      </div>
+      <div class="case-process__item">
+        <h4 class="case-process__step">03</h4>
+        <h3 class="case-process__title">Model Training</h3>
+        <p class="case-process__desc">Implemented a ResNet-18 architecture with data preprocessing, cosine learning rate scheduling, and reproducible training routines.</p>
+      </div>
+      <div class="case-process__item">
+        <h4 class="case-process__step">04</h4>
+        <h3 class="case-process__title">Evaluation & Benchmarking</h3>
+        <p class="case-process__desc">Achieved 90% accuracy and 90% F1-score. Compared results with state-of-the-art models from recent FER literature.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    
+    <!-- State of the Art -->
+
+    <section class="case-section">
+      <div class="case-section__header">
+        <h2 class="case-section__title case-section__title--highlight">State of the Art</h2>
+      </div>
+      <div class="case-section__content">
+        <p class="case-text">A review of recent research highlights key trade-offs in FER model design:</p>
+    
+        <div class="case-process">
+          <div class="case-process__item">
+            <h3 class="case-process__title">Power = Precision</h3>
+            <p class="case-process__desc">RRN + TST tops the charts (100% on CK+) — but demands serious computing power.</p>
+          </div>
+          <div class="case-process__item">
+            <h3 class="case-process__title">Smart & Slim</h3>
+            <p class="case-process__desc">MobileNetV2 + ResNet-18 delivers solid results (up to 86%) — perfect for limited hardware.</p>
+          </div>
+          <div class="case-process__item">
+            <h3 class="case-process__title">Transformers Scale</h3>
+            <p class="case-process__desc">ViT-based models generalize well but require more VRAM and longer training times.</p>
+          </div>
+          <div class="case-process__item">
+            <h3 class="case-process__title">SVMs Fall Behind</h3>
+            <p class="case-process__desc">Lightweight and simple, but classical SVMs struggle to keep up with deep learning models.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Theoretical Framework -->
+    <section class="case-section">
+          <div class="case-section__header">
+            <h2 class="case-section__title case-section__title--highlight">Theoretical Framework</h2>
+          </div>
+          <div class="case-section__content">
+            <p class="case-text">The project is rooted in:</p>
+          <ul class="case-text--list">
+            <li>Ekman's theory of universal emotions (seven core emotions)</li>
+            <li>Convolutional Neural Networks (CNNs) for spatial feature extraction</li>
+            <li>Transfer Learning and Fine-tunin</li>
+            <li>Cross-domain learning through dataset hybridization and augmentation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="case-section">
+      <div class="case-section__header">
+        <h2 class="case-section__title case-section__title--highlight">Development and Methodology</h2>
+      <div class="case-listing">
+        <div class="case-listing__group">
+          <h4>Dataset Development:</h4>
+          <ul>
+            <li>23,450 manually reviewed images across seven emotion classes.</li>
+            <li>Sources: FER-2013, AffectNet, Oulu-CASIA, MMI, web scraping, Meta & Gemini-generated faces.</li>
+          </ul>
+        </div>
+      
+        <div class="case-listing__group">
+          <h4>Architecture Proposed:</h4>
+          <ul>
+            <li>ResNet-18 pretrained on ImageNet.</li>
+            <li>Custom training loop with cosine LR scheduling and optional augmentations.</li>
+          </ul>
+        </div>
+      
+        <div class="case-listing__group">
+          <h4>Resources Used:</h4>
+          <ul>
+            <li>Intel Core i7 (10th Gen)</li>
+            <li>NVIDIA GTX 1650 Ti (4GB VRAM)</li>
+            <li>Python, PyTorch, OpenCV, Albumentations</li>
+          </ul>
+        </div>
+      </div>
+        </div>
+      </div>
+    </section>
+      
+
+    <!-- Results Section -->
+    <section class="case-section case-section--dark">
+      <div class="case-section__header">
+        <h2 class="case-section__title case-section__title--highlight">Results</h2>
+      </div>
+      <div class="case-section__content">
+        <div class="case-stats">
+          <div class="case-stat">
+            <h3 class="case-stat__value">90%</h3>
+            <p class="case-stat__label">Overall accuracy across 3,521 validation samples.</p>
+          </div>
+          <div class="case-stat">
+            <h3 class="case-stat__value">0.90 F1</h3>
+            <p class="case-stat__label">Highest-scoring classes: <strong>Happy</strong> and <strong>Surprise</strong>.</p>
+          </div>
+          <div class="case-stat">
+            <h3 class="case-stat__value">+4%↑</h3>
+            <p class="case-stat__label">Outperformed average ResNet-18 FER models (typically ~86%) on FER2013-like datasets.</p>
+          </div>
+        </div>
+        <p class="case-text">
+          According to Singh & Prabha (2024), FER models using MobileNetV2 and ResNet-18 typically achieve between 82.1% and 86% accuracy on datasets like FER2013. This project’s model, based on a refined ResNet-18 architecture, <strong>achieved 90% — exceeding the upper end of this range by ~4%.</strong>
+        </p>
+      </div>
+    </section>
+
+
+    <!-- Gallery Section -->
+    <!-- <section class="case-gallery">
+      <div class="case-gallery__item">
+        <img src="con_matrix_7emotions.png" alt="Project Gallery Image 1">
+      </div>
+      <div class="case-gallery__item">
+        <img src="project_gallery_2.jpg" alt="Project Gallery Image 2">
+      </div>
+    </section> -->
+
+    <!-- Theoretical Framework -->
+    <section class="case-section">
+      <div class="case-section__header">
+        <h2 class="case-section__title case-section__title--highlight">Next Steps</h2>
+      </div>
+      <ul class="case-text--list">
+        <li>Add emotion intensity and arousal-valence labeling.</li>
+        <li>Extend training to temporal data (videos) using LSTM or 3D CNNs.</li>
+        <li>Deploy the model in a lightweight desktop app or mobile tool for psychology, education, or HCI applications.</li>
+        <li>Evaluate performance on datasets like VFEM or AffWild2 for deeper mental health analysis integration.</li>
+      </ul>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="case-gallery">
+      <div class="case-gallery__item">
+        <img src="confussion_7_summer.png" alt="Project Gallery Image 1">
+      </div>
+    </section>
+
+    <!-- Next Project CTA -->
+    <section class="case-cta">
+      <div class="case-cta__content">
+        <h3 class="case-cta__title">Next Project</h3>
+        <h2 class="case-cta__project">Face Generation Using Autoencoders</h2>
+        <a href="project2.html" class="case-cta__link">View Project →</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__left">
+        <h3>Víctor Cárdenas</h3>
+        <p>Data Engineer & Scientist</p>
+      </div>
+      <div class="footer__right">
+        <div class="footer__links">
+          <a href="mailto:hello@victor.com" class="footer__link">Email</a>
+          <a href="https://www.linkedin.com/in/victor-cardenas-g/" class="footer__link">LinkedIn</a>
+          <a href="https://github.com/VictorCardenasG" class="footer__link">GitHub</a>
+        </div>
+        <p class="footer__copyright">© 2025 Victor Cárdenas. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="case-study.js"></script>
+</body>
+</html>

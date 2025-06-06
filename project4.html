@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Title | Victor Cárdenas</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- GSAP for animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+  <!-- Inter Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap">
+</head>
+<body>
+  <!-- Loading Overlay -->
+  <div class="loader">
+    <div class="loader__inner"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">
+      <img src="logo_vic.png" alt="Victor Cárdenas Logo" class="nav__logo-image">
+    </a>
+    <div class="nav__menu">
+      <a href="index.html" class="nav__item">Work</a>
+      <a href="about.html" class="nav__item">About</a>
+      <a href="cv.html" class="nav__item">CV</a>
+      <a href="contact.html" class="nav__item">Contact</a>
+    </div>
+  </nav>
+  
+  <!-- Case Study Header -->
+  <header class="case-header">
+    <div class="case-header__content">
+      <h1 class="case-header__title">
+        <span class="line">Customer Response</span>
+        <span class="line">Prediction with MLflow</span>
+      </h1>
+      <div class="case-header__meta">
+        <div class="case-meta__item">
+          <h4>Role</h4>
+          <p>Data Scientist</p>
+        </div>
+        <div class="case-meta__item">
+          <h4>Year</h4>
+          <p>2025</p>
+        </div>
+        <div class="case-meta__item">
+          <h4>Client</h4>
+          <p>Western Institute of Higher Education</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Image -->
+  <div class="case-hero">
+    <img src="project_4.png" alt="Project Hero Image" class="case-hero__image">
+  </div>
+
+  <!-- Case Study Content -->
+  <main class="case-content">
+    <!-- Introduction Section -->
+    <section class="case-section">
+      <div class="case-section__header">
+        <h2 class="case-section__title">Introduction</h2>
+      </div>
+      <div class="case-section__content">
+        <p class="case-text">
+        This project aimed to develop a machine learning pipeline capable of predicting whether a customer would respond to a marketing campaign. The solution involved supervised learning with models like Logistic Regression, Random Forest, and XGBoost. The full pipeline was tracked and orchestrated using MLflow.
+        </p>
+      </div>
+    </section>
+
+    <!-- Two Column Layout -->
+    <section class="case-section case-section--two-column">
+      <div class="case-column">
+        <h3 class="case-column__title">The Challenge</h3>
+        <p class="case-text">
+        Dealing with a highly imbalanced dataset where only ~15% of customers responded, and ensuring the model could generalize well without overfitting.
+        </p>
+      </div>
+      <div class="case-column">
+        <h3 class="case-column__title">The Solution</h3>
+        <p class="case-text">
+        A scalable ML experimentation workflow using MLflow for tracking and evaluation. The final solution involved a tuned XGBoost model with custom threshold adjustment to optimize the precision-recall tradeoff.
+        </p>
+      </div>
+    </section>
+
+    <!-- Full Width Image -->
+    <div class="case-image">
+      <img src="con_matrix_7emotions.png" alt="Project Detail">
+    </div>
+
+    <!-- Process Section -->
+    <section class="case-section">
+      <div class="case-section__header">
+        <h2 class="case-section__title">Process</h2>
+      </div>
+      <div class="case-section__content">
+        <p class="case-text">The approach involved several key phases:</p>
+        
+        <div class="case-process">
+          <div class="case-process__item">
+            <h4 class="case-process__step">01</h4>
+            <h3 class="case-process__title">Data Exploration</h3>
+            <p class="case-process__desc">Performed statistical analysis and visualizations. Identified class imbalance (~15% positive class).</p>
+          </div>
+          <div class="case-process__item">
+            <h4 class="case-process__step">02</h4>
+            <h3 class="case-process__title">Feature Engineering</h3>
+            <p class="case-process__desc">Encoded variables, engineered new features (e.g., customer tenure), and scaled inputs for logistic regression.</p>
+          </div>
+          <div class="case-process__item">
+            <h4 class="case-process__step">03</h4>
+            <h3 class="case-process__title">MLflow Experiments</h3>
+            <p class="case-process__desc">Trained over 30 models using varied hyperparameters and evaluated them using MLflow metrics and artifacts.</p>
+          </div>
+          <div class="case-process__item">
+            <h4 class="case-process__step">04</h4>
+            <h3 class="case-process__title">Threshold Tuning</h3>
+            <p class="case-process__desc">Analyzed precision-recall vs. threshold curves to determine the optimal decision threshold (0.55).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section__header">
+        <h2 class="case-section__title">01. State of the Art</h2>
+      </div>
+      <div class="case-section__content">
+        <p class="case-text">
+        Compared traditional models (Logistic Regression, Random Forest) with advanced techniques like XGBoost, including early stopping and scale_pos_weight tuning.
+        </p>
+      </section>
+
+
+    <section class="case-section">
+      <div class="case-section__header">
+        <h2 class="case-section__title">Workflow Summary</h2>
+      </div>
+      <div class="case-section__content">
+        <h3 class="case-column__title">1. Exploratory Data Analysis (EDA)</h3>
+        <p class="case-text">
+          I began by exploring the dataset to understand its structure and challenges. The dataset was imbalanced, with only about 15% of customers having responded to past campaigns. Feature distributions, correlation matrices, and missing value analysis were visualized to guide preprocessing.
+        </p>
+        <img src="churn_confussion.png" alt="Correlation Matrix" class="case-image__inline">
+        <p class="case-image-caption">A correlation matrix showing how customer behavior features relate.</p>
+
+        <h3 class="case-column__title">2. Data Preprocessing</h3>
+        <ul class="case-text--list">
+          <li>Missing values in the <code>Income</code> column were imputed using the median strategy.</li>
+          <li>Logistic Regression required feature scaling using <code>StandardScaler</code>.</li>
+          <li>All preprocessing steps were applied carefully to preserve feature meaning for later explainability.</li>
+        </ul>
+
+        <h3 class="case-column__title">3. ML Model Training with MLflow</h3>
+        <p class="case-text">
+          I trained Logistic Regression, Random Forest, and XGBoost models across multiple hyperparameters and tracked all experiments using MLflow. The system logged metrics (accuracy, precision, recall, F1-score), confusion matrix plots, and all serialized artifacts.
+        </p>
+        <img src="churn_threshold.png" alt="Precision vs Recall by Threshold" class="case-image__inline">
+        <p class="case-image-caption">Precision and recall performance across thresholds.</p>
+
+        <h3 class="case-column__title">4. Threshold Tuning</h3>
+        <p class="case-text">
+          Instead of using the default 0.5 threshold, I plotted precision and recall curves against decision thresholds to find the best tradeoff. I selected <strong>threshold = 0.55</strong> to maximize the F1-score while maintaining good precision.
+        </p>
+
+        <h3 class="case-column__title">5. Feature Importance</h3>
+        <p class="case-text">
+          Using XGBoost's built-in feature importance, I discovered that <code>AcceptedCmp5</code> was the most informative feature. This means customers who accepted the most recent past campaign were the most likely to accept a new one.
+        </p>
+        <img src="churn_feature_importance.png" alt="Feature Importance from XGBoost" class="case-image__inline">
+        <p class="case-image-caption">Top features ranked by their contribution to XGBoost's decisions.</p>
+
+        <h3 class="case-column__title">Feature Interpretation</h3>
+        <p class="case-text">
+          The model's most important feature, <code>AcceptedCmp5</code>, indicates whether a customer accepted campaign number five. This binary variable (1 = yes, 0 = no) proved to be a strong signal. It makes intuitive sense that recent campaign engagement predicts future responsiveness.
+        </p>
+
+        <h3 class="case-column__title">Final Model Performance</h3>
+        <ul class="case-text--list">
+          <li>Accuracy: <strong>92%</strong></li>
+          <li>Precision (class 1): <strong>0.69</strong></li>
+          <li>Recall (class 1): <strong>0.86</strong></li>
+          <li>F1-score (class 1): <strong>0.76</strong></li>
+        </ul>
+        <p class="case-text">
+          These results indicate that the final model can successfully identify most true responders with a low false positive rate, enabling smarter campaign targeting.
+        </p>
+      </div>
+    </section>
+
+<!-- Optional Image Placement -->
+<div class="case-image">
+  <img src="xgboost_feature_importance_dark.png" alt="XGBoost Feature Importance">
+</div>
+
+
+    <!-- Results Section -->
+    <section class="case-section case-section--dark">
+      <div class="case-section__header">
+        <h2 class="case-section__title">Results</h2>
+      </div>
+      <div class="case-section__content">
+        <div class="case-stats">
+          <div class="case-stat">
+            <h3 class="case-stat__value">92%</h3>
+            <p class="case-stat__label">Overall Accuracy</p>
+          </div>
+          <div class="case-stat">
+            <h3 class="case-stat__value">0.76</h3>
+            <p class="case-stat__label">F1 Score for Class 1</p>
+          </div>
+          <div class="case-stat">
+            <h3 class="case-stat__value">0.86</h3>
+            <p class="case-stat__label">Recall for Class 1</p>
+          </div>
+        </div>
+        <p class="case-text">The final XGBoost model achieved a strong balance between precision (0.69) and recall (0.86) using a tuned threshold of 0.55. This performance significantly outperformed baseline models and enabled confident decision-making in campaign targeting.</p>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="case-gallery">
+      <div class="case-gallery__item">
+        <img src="churn_threshold.png" alt="Project Gallery Image 1">
+      </div>
+      <div class="case-gallery__item">
+        <img src="project_gallery_2.jpg" alt="Project Gallery Image 2">
+      </div>
+    </section>
+
+    <!-- Next Project CTA -->
+    <section class="case-cta">
+      <div class="case-cta__content">
+        <h3 class="case-cta__title">Next Project</h3>
+        <h2 class="case-cta__project">Project Name</h2>
+        <a href="project2.html" class="case-cta__link">View Project →</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__left">
+        <h3>Victor Cárdenas</h3>
+        <p>Data Engineer & Scientist</p>
+      </div>
+      <div class="footer__right">
+        <div class="footer__links">
+          <a href="mailto:hello@victor.com" class="footer__link">Email</a>
+          <a href="https://www.linkedin.com/in/victor-cardenas-g/" class="footer__link">LinkedIn</a>
+          <a href="#" class="footer__link">GitHub</a>
+        </div>
+        <p class="footer__copyright">© 2023 Victor Cárdenas. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="case-study.js"></script>
+</body>
+</html>

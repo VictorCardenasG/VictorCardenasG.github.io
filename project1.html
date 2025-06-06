@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Predicting Spotify Streams | Victor Cárdenas</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- GSAP for animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+  <!-- Inter Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap">
+</head>
+<body>
+  <!-- Loading Overlay -->
+  <div class="loader">
+    <div class="loader__inner"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">
+      <img src="logo_vic.png" alt="Victor Cárdenas Logo" class="nav__logo-image">
+    </a>
+    <div class="nav__menu">
+      <a href="index.html" class="nav__item">Work</a>
+      <a href="about.html" class="nav__item">About</a>
+      <a href="cv.html" class="nav__item">CV</a>
+      <a href="contact.html" class="nav__item">Contact</a>
+    </div>
+  </nav>
+  
+  <!-- Case Study Header -->
+  <header class="case-header">
+    <div class="case-header__content">
+      <h1 class="case-header__title">
+        <span class="line">Predicting Spotify's Most Streamed Songs Using Audio Features</span>
+      </h1>
+      <div class="case-header__meta">
+        <div class="case-meta__item">
+          <h4>Role</h4>
+          <p>Data Scientist</p>
+        </div>
+        <div class="case-meta__item">
+          <h4>Year</h4>
+          <p>2024</p>
+        </div>
+        <div class="case-meta__item">
+          <h4>Tools</h4>
+          <p>Python, Spotify API, Scikit-learn</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Image -->
+  <div class="case-hero">
+    <img src="spotify_hero.jpg" alt="Spotify data visualization" class="case-hero__image">
+  </div>
+
+  <!-- Case Study Content -->
+  <main class="case-content">
+    <!-- Introduction Section -->
+    <section class="case-section">
+      <div class="case-section__header">
+        <h2 class="case-section__title">Introduction</h2>
+      </div>
+      <div class="case-section__content">
+        <p class="case-text">In this project, I set out to predict whether a song would be among the most streamed songs based on its various audio features. Utilizing data analytics and machine learning techniques, I developed a model capable of identifying songs with similar characteristics to the most streamed ones on Spotify.</p>
+      </div>
+    </section>
+
+    <!-- Two Column Layout -->
+    <section class="case-section case-section--two-column">
+      <div class="case-column">
+        <h3 class="case-column__title">The Challenge</h3>
+        <p class="case-text">Understanding what makes a song popular on Spotify among millions of tracks, and identifying the key audio features that contribute to high streaming numbers.</p>
+      </div>
+      <div class="case-column">
+        <h3 class="case-column__title">The Solution</h3>
+        <p class="case-text">A machine learning model that analyzes audio features to predict streaming potential, using Isolation Forest to identify songs with characteristics similar to current hits.</p>
+      </div>
+    </section>
+
+    <!-- Full Width Image -->
+    <div class="case-image">
+      <img src="correlation_matrix.png" alt="Audio features correlation matrix">
+    </div>
+
+    <!-- Process Section -->
+    <section class="case-section">
+      <div class="case-section__header">
+        <h2 class="case-section__title">Process</h2>
+      </div>
+      <div class="case-section__content">
+        <p class="case-text">The project involved several key phases:</p>
+        
+        <div class="case-process">
+          <div class="case-process__item">
+            <h4 class="case-process__step">01</h4>
+            <h3 class="case-process__title">Data Collection</h3>
+            <p class="case-process__desc">Gathered Spotify's most streamed songs and their audio features through the Spotify API.</p>
+          </div>
+          <div class="case-process__item">
+            <h4 class="case-process__step">02</h4>
+            <h3 class="case-process__title">Data Preparation</h3>
+            <p class="case-process__desc">Cleaned, normalized, and merged datasets for analysis.</p>
+          </div>
+          <div class="case-process__item">
+            <h4 class="case-process__step">03</h4>
+            <h3 class="case-process__title">Exploratory Analysis</h3>
+            <p class="case-process__desc">Identified patterns and correlations between audio features and streaming numbers.</p>
+          </div>
+          <div class="case-process__item">
+            <h4 class="case-process__step">04</h4>
+            <h3 class="case-process__title">Model Development</h3>
+            <p class="case-process__desc">Built and trained an Isolation Forest model to identify popular song characteristics.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Findings Section -->
+    <section class="case-section">
+      <div class="case-section__header">
+        <h2 class="case-section__title">Key Findings</h2>
+      </div>
+      <div class="case-section__content">
+        <div class="case-stats">
+          <div class="case-stat">
+            <h3 class="case-stat__value">Valence</h3>
+            <p class="case-stat__label">Most important feature</p>
+          </div>
+          <div class="case-stat">
+            <h3 class="case-stat__value">4x</h3>
+            <p class="case-stat__label">Faster Processing</p>
+          </div>
+          <div class="case-stat">
+            <h3 class="case-stat__value">10K</h3>
+            <p class="case-stat__label">Daily Predictions</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="case-gallery">
+      <div class="case-gallery__item">
+        <img src="feature_importance.png" alt="Feature importance visualization">
+      </div>
+      <div class="case-gallery__item">
+        <img src="pca_spotifysongs.png" alt="PCA clustering of Spotify songs">
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="case-section case-section--dark">
+      <div class="case-section__header">
+        <h2 class="case-section__title">Results</h2>
+      </div>
+      <div class="case-section__content">
+        <div class="case-stats">
+          <div class="case-stat">
+            <h3 class="case-stat__value">100%</h3>
+            <p class="case-stat__label">Accuracy on Training Set</p>
+          </div>
+          <div class="case-stat">
+            <h3 class="case-stat__value">14</h3>
+            <p class="case-stat__label">Audio Features Analyzed</p>
+          </div>
+          <div class="case-stat">
+            <h3 class="case-stat__value">4</h3>
+            <p class="case-stat__label">Distinct Song Clusters</p>
+          </div>
+        </div>
+        <p class="case-text">The model successfully identified the audio feature patterns of popular songs and could accurately classify known hits. When tested with new songs, it effectively distinguished between tracks with hit potential and those less likely to achieve high streams.</p>
+      </div>
+    </section>
+
+    <!-- Next Project CTA -->
+    <section class="case-cta">
+      <div class="case-cta__content">
+        <h3 class="case-cta__title">Next Project</h3>
+        <h2 class="case-cta__project">Emotion Classification Using Deep Learning</h2>
+        <a href="emotion-classification.html" class="case-cta__link">View Project →</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__left">
+        <h3>Victor Cárdenas</h3>
+        <p>Data Engineer & Scientist</p>
+      </div>
+      <div class="footer__right">
+        <div class="footer__links">
+          <a href="mailto:hello@victor.com" class="footer__link">Email</a>
+          <a href="https://www.linkedin.com/in/victor-cardenas-g/" class="footer__link">LinkedIn</a>
+          <a href="#" class="footer__link">GitHub</a>
+        </div>
+        <p class="footer__copyright">© 2024 Victor Cárdenas. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="case-study.js"></script>
+</body>
+</html>
