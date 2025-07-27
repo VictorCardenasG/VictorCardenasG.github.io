@@ -134,3 +134,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// Typewriter effect for logo
+const logoEl = document.querySelector('.nav__logo-typewriter');
+if (logoEl) {
+  const tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
+
+  tl.set(logoEl, { width: 0, opacity: 1 });
+
+  tl.to(logoEl, {
+    width: "5.5ch",
+    duration: 1.5,
+    ease: "steps(5)",
+  });
+
+  tl.to(logoEl, {
+    delay: 1.5,       // cuánto tiempo permanece visible
+    opacity: 0,       // desaparece de golpe
+    duration: 0.3,
+    ease: "power1.out"
+  });
+
+  tl.set(logoEl, { width: 0, opacity: 1 }); // reinicia
+}

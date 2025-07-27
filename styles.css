@@ -1128,3 +1128,24 @@
       gap: 2rem;
     }
   }
+
+.nav__logo-typewriter {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  width: 0;
+  opacity: 1;
+  color: #ffffff; 
+  text-decoration: none;
+}
+
+.nav__logo,
+.nav__logo:visited,
+.nav__logo:hover,
+.nav__logo:active {
+  text-decoration: none !important;
+  color: inherit !important;
+}
