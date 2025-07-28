@@ -157,3 +157,22 @@ if (logoEl) {
 
   tl.set(logoEl, { width: 0, opacity: 1 }); // reinicia
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.createElement('div');
+  modal.classList.add('image-modal');
+  const modalImg = document.createElement('img');
+  modal.appendChild(modalImg);
+  document.body.appendChild(modal);
+
+  document.querySelectorAll('.image-track img').forEach(img => {
+    img.addEventListener('click', () => {
+      modalImg.src = img.src;
+      modal.classList.add('show');
+    });
+  });
+
+  modal.addEventListener('click', () => {
+    modal.classList.remove('show');
+  });
+});
