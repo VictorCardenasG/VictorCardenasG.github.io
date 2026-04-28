@@ -5,19 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Predicting Spotify Streams | Victor Cárdenas</title>
   <link rel="stylesheet" href="styles.css">
-  <!-- GSAP for animations -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-  <!-- Inter Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap">
 </head>
+
 <body>
-  <!-- Loading Overlay -->
+
   <div class="loader">
     <div class="loader__inner"></div>
   </div>
 
-  <!-- Navigation -->
   <nav class="nav">
     <a href="index.html" class="nav__logo">
       <span class="nav__logo-typewriter">VCG_</span>
@@ -29,12 +27,11 @@
       <a href="contact.html" class="nav__item">Contact</a>
     </div>
   </nav>
-  
-  <!-- Case Study Header -->
+
   <header class="case-header">
     <div class="case-header__content">
       <h1 class="case-header__title">
-        <span class="line">Predicting Spotify's Most Streamed Songs Using Audio Features</span>
+        <span class="line">Understanding What Makes Songs Popular</span>
       </h1>
       <div class="case-header__meta">
         <div class="case-meta__item">
@@ -53,98 +50,121 @@
     </div>
   </header>
 
-  <!-- Hero Image -->
   <div class="case-hero">
-    <img src="spotify_hero.jpg" alt="Spotify data visualization" class="case-hero__image">
+    <img src="hero_spotiify.png" alt="Spotify data visualization" class="case-hero__image">
   </div>
 
-  <!-- Case Study Content -->
   <main class="case-content">
-    <!-- Introduction Section -->
+
+    <!-- INTRO -->
     <section class="case-section">
       <div class="case-section__header">
         <h2 class="case-section__title">Introduction</h2>
       </div>
       <div class="case-section__content">
-        <p class="case-text">In this project, I set out to predict whether a song would be among the most streamed songs based on its various audio features. Utilizing data analytics and machine learning techniques, I developed a model capable of identifying songs with similar characteristics to the most streamed ones on Spotify.</p>
+        <p class="case-text">
+          In this project, I explored whether audio features alone can reveal patterns associated with highly streamed songs on Spotify.
+          Instead of directly predicting popularity, I analyzed how successful songs behave in feature space and developed a model to identify tracks that align with those patterns.
+        </p>
       </div>
     </section>
 
-    <!-- Two Column Layout -->
+    <!-- CHALLENGE / SOLUTION -->
     <section class="case-section case-section--two-column">
       <div class="case-column">
         <h3 class="case-column__title">The Challenge</h3>
-        <p class="case-text">Understanding what makes a song popular on Spotify among millions of tracks, and identifying the key audio features that contribute to high streaming numbers.</p>
+        <p class="case-text">
+          Understanding what makes a song popular among millions of tracks is complex. Popularity is influenced by many external factors, but this project focuses strictly on whether audio features alone contain meaningful signals.
+        </p>
       </div>
       <div class="case-column">
-        <h3 class="case-column__title">The Solution</h3>
-        <p class="case-text">A machine learning model that analyzes audio features to predict streaming potential, using Isolation Forest to identify songs with characteristics similar to current hits.</p>
+        <h3 class="case-column__title">The Approach</h3>
+        <p class="case-text">
+          An unsupervised machine learning approach using Isolation Forest to model the structure of songs based on audio features, and identify which tracks fall within or outside the learned distribution of known songs.
+        </p>
       </div>
     </section>
 
-    <!-- Full Width Image -->
+    <!-- IMAGE -->
     <div class="case-image">
       <img src="correlation_matrix.png" alt="Audio features correlation matrix">
     </div>
 
-    <!-- Process Section -->
+    <!-- PROCESS -->
     <section class="case-section">
       <div class="case-section__header">
         <h2 class="case-section__title">Process</h2>
       </div>
       <div class="case-section__content">
-        <p class="case-text">The project involved several key phases:</p>
-        
+
         <div class="case-process">
+
           <div class="case-process__item">
             <h4 class="case-process__step">01</h4>
             <h3 class="case-process__title">Data Collection</h3>
-            <p class="case-process__desc">Gathered Spotify's most streamed songs and their audio features through the Spotify API.</p>
+            <p class="case-process__desc">
+              Gathered Spotify's most streamed songs along with their audio features.
+            </p>
           </div>
+
           <div class="case-process__item">
             <h4 class="case-process__step">02</h4>
             <h3 class="case-process__title">Data Preparation</h3>
-            <p class="case-process__desc">Cleaned, normalized, and merged datasets for analysis.</p>
+            <p class="case-process__desc">
+              Cleaned, merged, and normalized datasets to create a consistent feature space.
+            </p>
           </div>
+
           <div class="case-process__item">
             <h4 class="case-process__step">03</h4>
             <h3 class="case-process__title">Exploratory Analysis</h3>
-            <p class="case-process__desc">Identified patterns and correlations between audio features and streaming numbers.</p>
+            <p class="case-process__desc">
+              Analyzed correlations and feature distributions to understand relationships between audio characteristics.
+            </p>
           </div>
+
           <div class="case-process__item">
             <h4 class="case-process__step">04</h4>
-            <h3 class="case-process__title">Model Development</h3>
-            <p class="case-process__desc">Built and trained an Isolation Forest model to identify popular song characteristics.</p>
+            <h3 class="case-process__title">Modeling</h3>
+            <p class="case-process__desc">
+              Trained an Isolation Forest model to learn the distribution of audio features and detect songs that align with or deviate from this learned structure.
+            </p>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Key Findings Section -->
+    <!-- FINDINGS -->
     <section class="case-section">
       <div class="case-section__header">
         <h2 class="case-section__title">Key Findings</h2>
       </div>
       <div class="case-section__content">
+
         <div class="case-stats">
+
           <div class="case-stat">
             <h3 class="case-stat__value">Valence</h3>
-            <p class="case-stat__label">Most important feature</p>
+            <p class="case-stat__label">Most influential feature in the model’s feature importance analysis</p>
           </div>
+
           <div class="case-stat">
-            <h3 class="case-stat__value">4x</h3>
-            <p class="case-stat__label">Faster Processing</p>
+            <h3 class="case-stat__value">Threshold</h3>
+            <p class="case-stat__label">Score = 0 served as a practical dividing point between less typical and more pattern-aligned songs</p>
           </div>
+
           <div class="case-stat">
-            <h3 class="case-stat__value">10K</h3>
-            <p class="case-stat__label">Daily Predictions</p>
+            <h3 class="case-stat__value">Qualitative Test</h3>
+            <p class="case-stat__label">In custom playlists, many globally recognized songs consistently appeared on the model’s “more typical” side</p>
           </div>
+
         </div>
-        </div>
+
       </div>
     </section>
 
-    <!-- Gallery Section -->
+    <!-- GALLERY -->
     <section class="case-gallery">
       <div class="case-gallery__item">
         <img src="feature_importance.png" alt="Feature importance visualization">
@@ -154,41 +174,65 @@
       </div>
     </section>
 
-    <!-- Results Section -->
+    <!-- RESULTS -->
+    <!-- RESULTS -->
     <section class="case-section case-section--dark">
       <div class="case-section__header">
         <h2 class="case-section__title">Results</h2>
       </div>
+
       <div class="case-section__content">
+
         <div class="case-stats">
+
           <div class="case-stat">
-            <h3 class="case-stat__value">100%</h3>
-            <p class="case-stat__label">Accuracy on Training Set</p>
+            <h3 class="case-stat__value">0.0</h3>
+            <p class="case-stat__label">Threshold used to separate less typical vs more pattern-aligned songs</p>
           </div>
+
           <div class="case-stat">
-            <h3 class="case-stat__value">14</h3>
-            <p class="case-stat__label">Audio Features Analyzed</p>
+            <h3 class="case-stat__value">Mixed Playlist</h3>
+            <p class="case-stat__label">Included globally known, niche, and instrumental tracks for qualitative evaluation</p>
           </div>
+
           <div class="case-stat">
-            <h3 class="case-stat__value">4</h3>
-            <p class="case-stat__label">Distinct Song Clusters</p>
+            <h3 class="case-stat__value">Pattern Recognition</h3>
+            <p class="case-stat__label">Popular songs frequently appeared closer to the learned distribution</p>
           </div>
+
         </div>
-        <p class="case-text">The model successfully identified the audio feature patterns of popular songs and could accurately classify known hits. When tested with new songs, it effectively distinguished between tracks with hit potential and those less likely to achieve high streams.</p>
+
+        <p class="case-text">
+          Rather than directly predicting popularity, the model created a one-dimensional similarity spectrum based on audio features.
+          Songs with scores above the threshold (score ≥ 0) were generally closer to the learned structure derived from Spotify’s broader dataset.
+        </p>
+
+        <p class="case-text">
+          When tested using a manually curated playlist containing both globally recognized hits and lesser-known tracks, many culturally recognizable songs appeared on the more pattern-aligned side of the spectrum.
+          While exploratory rather than statistically conclusive, this supported the hypothesis that many successful songs share measurable audio similarities.
+        </p>
+
       </div>
     </section>
 
-    <!-- Next Project CTA -->
+
+    <section class="case-gallery">
+      <div class="case-gallery__item">
+        <img src="most_streamed_result.png" alt="PCA clustering of Spotify songs">
+      </div>
+    </section>
+
+    <!-- CTA -->
     <section class="case-cta">
       <div class="case-cta__content">
         <h3 class="case-cta__title">Next Project</h3>
-        <h2 class="case-cta__project">Emotion Classification Using Deep Learning</h2>
-        <a href="emotion-classification.html" class="case-cta__link">View Project →</a>
+        <h2 class="case-cta__project">Personal Drawings and Sketches</h2>
+        <a href="drawings.html" class="case-cta__link">View Project →</a>
       </div>
     </section>
+
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="footer__content">
       <div class="footer__left">
@@ -208,5 +252,6 @@
 
   <script src="script.js"></script>
   <script src="case-study.js"></script>
+
 </body>
 </html>
