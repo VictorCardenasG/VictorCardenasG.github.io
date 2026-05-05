@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Price Pipeline | Victor Cárdenas</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap">
+</head>
+
+<body>
+
+  <!-- Loader -->
+  <div class="loader">
+    <div class="loader__inner"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-typewriter">VCG_</span>
+    </a>
+    <div class="nav__menu">
+      <a href="index.html" class="nav__item">Work</a>
+      <a href="about.html" class="nav__item">About</a>
+      <a href="cv.html" class="nav__item">CV</a>
+      <a href="contact.html" class="nav__item">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="case-header">
+    <div class="case-header__content">
+      <h1 class="case-header__title">
+        <span class="line">Building an End-to-End</span>
+        <span class="line">Car Price Prediction Pipeline</span>
+      </h1>
+
+      <div class="case-header__meta">
+        <div class="case-meta__item">
+          <h4>Role</h4>
+          <p>Data & ML Engineer</p>
+        </div>
+
+        <div class="case-meta__item">
+          <h4>Year</h4>
+          <p>2026</p>
+        </div>
+
+        <div class="case-meta__item">
+          <h4>Tools</h4>
+          <p>Python, Scikit-learn, Pandas, Modular Pipelines</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <div class="case-hero">
+    <img src="optimized-images/cars_hero.webp" alt="Car price pipeline architecture visualization" class="case-hero__image">
+  </div>
+
+  <main class="case-content">
+
+    <!-- INTRO -->
+    <section class="case-section">
+      <div class="case-section__header">
+        <h2 class="case-section__title">Introduction</h2>
+      </div>
+
+      <div class="case-section__content">
+        <p class="case-text">
+          In this project, I built a modular end-to-end machine learning pipeline that transforms messy automotive listings into a structured prediction system.
+          Rather than focusing exclusively on prediction accuracy, the primary objective was to design a reproducible workflow capable of ingestion, cleaning, feature engineering, benchmarking, diagnostics, and automated retraining from a single evolving CSV source.
+        </p>
+      </div>
+    </section>
+
+    <!-- CHALLENGE / APPROACH -->
+    <section class="case-section case-section--two-column">
+
+      <div class="case-column">
+        <h3 class="case-column__title">The Challenge</h3>
+        <p class="case-text">
+          Real-world vehicle datasets are highly inconsistent: horsepower ranges, battery capacities, mixed engine units, irregular seat formatting, and price ranges all create significant preprocessing challenges.
+          Building a usable system required converting unreliable raw listings into structured, model-ready intelligence.
+        </p>
+      </div>
+
+      <div class="case-column">
+        <h3 class="case-column__title">The Approach</h3>
+        <p class="case-text">
+          A modular Python architecture split across ingestion, cleaning, feature engineering, model benchmarking, diagnostics generation, and watch-based reruns — designed to simulate a production-style local data pipeline rather than a single notebook experiment.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- IMAGE -->
+    <div class="case-image">
+      <img src="optimized-images/cars_pipeline.webp" alt="Pipeline flow from raw CSV to diagnostics">
+    </div>
+
+    <!-- PROCESS -->
+    <section class="case-section">
+      <div class="case-section__header">
+        <h2 class="case-section__title">Process</h2>
+      </div>
+
+      <div class="case-section__content">
+
+        <div class="case-process">
+
+          <div class="case-process__item">
+            <h4 class="case-process__step">01</h4>
+            <h3 class="case-process__title">Data Ingestion</h3>
+            <p class="case-process__desc">
+              Loaded raw automotive CSV data dynamically, with configurable environment paths and checkpoint logging.
+            </p>
+          </div>
+
+          <div class="case-process__item">
+            <h4 class="case-process__step">02</h4>
+            <h3 class="case-process__title">Cleaning & Normalization</h3>
+            <p class="case-process__desc">
+              Parsed inconsistent strings into structured variables such as engine displacement, battery capacity, horsepower, torque, acceleration, and pricing ranges.
+            </p>
+          </div>
+
+          <div class="case-process__item">
+            <h4 class="case-process__step">03</h4>
+            <h3 class="case-process__title">Feature Engineering</h3>
+            <p class="case-process__desc">
+              Expanded 11 raw columns into 47 engineered attributes, including performance ratios, fuel classifications, and structural indicators.
+            </p>
+          </div>
+
+          <div class="case-process__item">
+            <h4 class="case-process__step">04</h4>
+            <h3 class="case-process__title">Model Benchmarking</h3>
+            <p class="case-process__desc">
+              Compared Random Forest, Gradient Boosting, Extra Trees, and Linear Regression through cross-validation before selecting the strongest candidate.
+            </p>
+          </div>
+
+          <div class="case-process__item">
+            <h4 class="case-process__step">05</h4>
+            <h3 class="case-process__title">Diagnostics & Monitoring</h3>
+            <p class="case-process__desc">
+              Generated prediction diagnostics, worst-case prediction analysis, price-band metrics, and optional file-watch automation for reruns.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- KEY FINDINGS -->
+    <section class="case-section">
+      <div class="case-section__header">
+        <h2 class="case-section__title">Key Findings</h2>
+      </div>
+
+      <div class="case-section__content">
+
+        <div class="case-stats">
+
+          <div class="case-stat">
+            <h3 class="case-stat__value">47 Features</h3>
+            <p class="case-stat__label">Expanded from 11 raw columns through structured cleaning and feature engineering</p>
+          </div>
+
+          <div class="case-stat">
+            <h3 class="case-stat__value">Extra Trees</h3>
+            <p class="case-stat__label">Best-performing model among 4 benchmarked regressors</p>
+          </div>
+
+          <div class="case-stat">
+            <h3 class="case-stat__value">Watch Mode</h3>
+            <p class="case-stat__label">Pipeline can automatically rerun when source data changes</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="case-gallery">
+      <div class="case-gallery__item">
+        <img src="optimized-images/logs_output.webp" loading="lazy" alt="Pipeline logs and checkpoint outputs">
+      </div>
+
+
+    <!-- RESULTS -->
+    <section class="case-section case-section--dark">
+      <div class="case-section__header">
+        <h2 class="case-section__title">Results</h2>
+      </div>
+
+      <div class="case-section__content">
+
+        <div class="case-stats">
+
+          <div class="case-stat">
+            <h3 class="case-stat__value">1218</h3>
+            <p class="case-stat__label">Rows ingested and transformed from raw automotive listings</p>
+          </div>
+
+          <div class="case-stat">
+            <h3 class="case-stat__value">18.92%</h3>
+            <p class="case-stat__label">Best cross-validation MAPE from selected model candidate</p>
+          </div>
+
+          <div class="case-stat">
+            <h3 class="case-stat__value">14.54%</h3>
+            <p class="case-stat__label">Final hold-out MAPE after full pipeline training</p>
+          </div>
+
+        </div>
+
+        <p class="case-text">
+          While predictive performance varied significantly across vehicle segments — particularly in heterogeneous luxury and mid-tier categories — the project successfully demonstrated that robust preprocessing and structured orchestration often matter as much as final model choice.
+        </p>
+
+        <p class="case-text">
+          More importantly, this system showed how a single raw CSV can evolve into a modular machine learning workflow with reproducible outputs, diagnostics, and automated retraining behavior — emphasizing systems design over isolated prediction.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- FINAL IMAGE -->
+    <section class="case-gallery">
+      <div class="case-gallery__item">
+        <img src="optimized-images/cars_final.webp" loading="lazy" alt="End-to-end pipeline summary visualization">
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="case-cta">
+      <div class="case-cta__content">
+        <h3 class="case-cta__title">Next Project</h3>
+        <h2 class="case-cta__project">Emotion Classification Using Deep Learning</h2>
+        <a href="emotion-classification.html" class="case-cta__link">View Project →</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__left">
+        <h3>Victor Cárdenas</h3>
+        <p>Data & Systems Engineer</p>
+      </div>
+
+      <div class="footer__right">
+        <div class="footer__links">
+          <a href="mailto:hello@victor.com" class="footer__link">Email</a>
+          <a href="https://www.linkedin.com/in/victor-cardenas-g/" class="footer__link">LinkedIn</a>
+          <a href="https://github.com/VictorCardenasG" class="footer__link">GitHub</a>
+        </div>
+
+        <p class="footer__copyright">© 2026 Victor Cárdenas. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="case-study.js"></script>
+
+</body>
+</html>
